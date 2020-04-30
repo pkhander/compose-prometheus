@@ -1,0 +1,50 @@
+version: "3"
+
+networks:
+  public: {}
+
+volumes:
+  grafana_lib: {}
+  prometheus_data: {}
+  
+services:
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - 9990:9090
+    networks:
+      - public
+    volumes:
+      - prometheus_data:/prometheus
+      - ./prometheus/:/etc/prometheus/
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    depends_on:
+      -snmp-exporter
+
+  snmp-exporter:
+    image: prom/snmp-exporter
+    volumes:
+      - ./snmp_exporter/:/etc/snmp_exporter/
+    expose:
+      - 9116
+    ports:
+      - 9116:9116
+    networks:
+      -public
+    depends_on:
+      -prometheus
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3110:3000"
+    networks:
+      - public
+    volumes:
+      - grafana_lib:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=pass
+    depends_on:
+      - prometheus
+
