@@ -20,20 +20,19 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
     depends_on:
-      -snmp-exporter
+      - snmp-exporter
 
   snmp-exporter:
     image: prom/snmp-exporter
     volumes:
       - ./snmp_exporter/:/etc/snmp_exporter/
     expose:
-      - 9116
+      - 9116  
     ports:
       - 9116:9116
+      - 116:116/udp
     networks:
-      -public
-    depends_on:
-      -prometheus
+      - public
 
   grafana:
     image: grafana/grafana
