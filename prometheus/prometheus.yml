@@ -29,7 +29,7 @@ scrape_configs:
       - targets: ['10.0.19.42','10.0.17.42']
     metrics_path: /snmp
     params:
-      module: [cisco_wlc]
+      module: [if_mib]
       community: [kznstack]
     relabel_configs:
       - source_labels: [__address__]
