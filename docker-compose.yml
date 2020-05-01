@@ -4,7 +4,7 @@ networks:
   public: {}
 
 volumes:
-  grafana_lib: {}
+  grafana_data: {}
   prometheus_data: {}
   
 services:
@@ -41,9 +41,11 @@ services:
     networks:
       - public
     volumes:
-      - grafana_lib:/var/lib/grafana
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=pass
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    env_file:
+      - ./grafana/config.monitoring
     depends_on:
       - prometheus
+
 
