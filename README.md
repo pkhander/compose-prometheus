@@ -1,16 +1,14 @@
 # compose-prometheus
 
-##This is a docker-compose stack created for a test enviroment to monitor MOC network switches. It consits of a working SNMP exporter with Prometheus and Grafana. 
-
-Below are the Pre-requisites to run this stack. 
+## This is a docker-compose stack created for a test enviroment to monitor MOC network switches. It consits of a working SNMP exporter with Prometheus and Grafana. 
 
 # Pre-requisites
 
 1. Ensure you have [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker compose](https://docs.docker.com/compose/install/) on your system
 
-2. Insert the IP address of the targeted switch in *prometheus/prometheus.yml* file 
+2. In *prometheus/prometheus.yml*, replace ```INSERT IP``` with the IP address of the target switch
 
-3. Insert the community string of the SNMP device in *snmp_exporter/snmp.yml*.(It should be last line in the file)
+3. In *snmp_exporter/snmp.yml*, replace ```COMMUNITY_STRING``` with the community string of the SNMP device (it should be the last line of the file)
 
 After these changes you should be all set to run the stack using *docker-compose up*
 
