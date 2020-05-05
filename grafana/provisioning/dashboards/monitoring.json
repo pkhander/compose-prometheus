@@ -12,841 +12,96 @@
       }
     ]
   },
-  "description": "For snmp_exporter IF-MIB",
   "editable": true,
-  "gnetId": 11169,
-  "graphTooltip": 1,
-  "iteration": 1588278383682,
+  "gnetId": 1124,
+  "graphTooltip": 0,
+  "iteration": 1588686408019,
   "links": [],
   "panels": [
     {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#FA6400",
-        "#d44a3a"
-      ],
-      "datasource": "${DS_PROMETHEUS}",
-      "decimals": 1,
-      "format": "ms",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
+      "aliasColors": {
+        "Out": "#C15C17"
       },
-      "gridPos": {
-        "h": 3,
-        "w": 8,
-        "x": 0,
-        "y": 0
-      },
-      "id": 25,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sysUpTime{job=\"$Job\"} * 10",
-          "legendFormat": "In",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Uptime",
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#56A64B",
-        "#d44a3a"
-      ],
-      "datasource": "${DS_PROMETHEUS}",
-      "decimals": 2,
-      "format": "Bps",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 8,
-        "x": 8,
-        "y": 0
-      },
-      "id": 23,
-      "interval": "",
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "150%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "max(irate(ifHCOutOctets{job=\"$Job\"}[5m]))",
-          "instant": false,
-          "legendFormat": "Out",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Max Out (Current)",
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#1F60C4",
-        "#d44a3a"
-      ],
-      "datasource": "${DS_PROMETHEUS}",
-      "decimals": 2,
-      "format": "Bps",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 8,
-        "x": 16,
-        "y": 0
-      },
-      "id": 24,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "max(irate(ifHCInOctets{job=\"$Job\"}[5m]))",
-          "legendFormat": "In",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Max In (Current)",
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#56A64B",
-        "#d44a3a"
-      ],
-      "datasource": "${DS_PROMETHEUS}",
-      "decimals": 2,
-      "format": "decbytes",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 8,
-        "x": 8,
-        "y": 3
-      },
-      "id": 29,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "max(delta(ifHCOutOctets{job=\"$Job\"}[$__range]))",
-          "legendFormat": "Out",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Total Out",
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "#1F60C4",
-        "#d44a3a"
-      ],
-      "datasource": "${DS_PROMETHEUS}",
-      "decimals": 2,
-      "format": "decbytes",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 8,
-        "x": 16,
-        "y": 3
-      },
-      "id": 28,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "max(delta(ifHCInOctets{job=\"$Job\"}[$__range]))",
-          "instant": false,
-          "legendFormat": "In",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Total In",
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "columns": [],
-      "datasource": "${DS_PROMETHEUS}",
-      "fontSize": "100%",
-      "gridPos": {
-        "h": 10,
-        "w": 24,
-        "x": 0,
-        "y": 6
-      },
-      "id": 26,
-      "options": {},
-      "pageSize": null,
-      "scroll": true,
-      "showHeader": true,
-      "sort": {
-        "col": 9,
-        "desc": true
-      },
-      "styles": [
-        {
-          "alias": "Out",
-          "align": "auto",
-          "colorMode": "row",
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(0, 0, 0, 0)",
-            "rgba(55, 135, 45, 0.34)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #A",
-          "thresholds": [
-            "0",
-            "1"
-          ],
-          "type": "number",
-          "unit": "Bps"
-        },
-        {
-          "alias": "In",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "link": false,
-          "mappingType": 1,
-          "pattern": "Value #B",
-          "thresholds": [],
-          "type": "number",
-          "unit": "Bps"
-        },
-        {
-          "alias": "Name",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "ifName",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "alias": "Alias",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "ifAlias",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "alias": "Total out",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #C",
-          "thresholds": [],
-          "type": "number",
-          "unit": "decbytes"
-        },
-        {
-          "alias": "Total in",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #D",
-          "thresholds": [],
-          "type": "number",
-          "unit": "decbytes"
-        },
-        {
-          "alias": "Bandwidth",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 0,
-          "mappingType": 1,
-          "pattern": "Value #E",
-          "thresholds": [],
-          "type": "number",
-          "unit": "Mbits"
-        },
-        {
-          "alias": "",
-          "align": "auto",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "/.*/",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        }
-      ],
-      "targets": [
-        {
-          "expr": "irate(ifHCOutOctets{job=\"$Job\"}[5m])",
-          "format": "table",
-          "instant": true,
-          "legendFormat": "out",
-          "refId": "A"
-        },
-        {
-          "expr": "irate(ifHCInOctets{job=\"$Job\"}[5m])",
-          "format": "table",
-          "instant": true,
-          "legendFormat": "in",
-          "refId": "B"
-        },
-        {
-          "expr": "delta(ifHCOutOctets{job=\"$Job\"}[$__range])",
-          "format": "table",
-          "instant": true,
-          "legendFormat": "total out",
-          "refId": "C"
-        },
-        {
-          "expr": "delta(ifHCInOctets{job=\"$Job\"}[$__range])",
-          "format": "table",
-          "instant": true,
-          "legendFormat": "total in",
-          "refId": "D"
-        },
-        {
-          "expr": "ifHighSpeed{job=\"$Job\"}",
-          "format": "table",
-          "instant": true,
-          "legendFormat": "high speed",
-          "refId": "E"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Status",
-      "transform": "table",
-      "type": "table"
-    },
-    {
-      "datasource": "${DS_PROMETHEUS}",
-      "description": "Max: 10MB  \nRed Status: 9MB",
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 16
-      },
-      "id": 31,
-      "options": {
-        "displayMode": "lcd",
-        "fieldOptions": {
-          "calcs": [
-            "last"
-          ],
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "decimals": 2,
-            "mappings": [],
-            "max": 10000000,
-            "min": 0,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "semi-dark-green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 9000000
-                }
-              ]
-            },
-            "unit": "Bps"
-          },
-          "overrides": [],
-          "values": false
-        },
-        "orientation": "horizontal",
-        "showUnfilled": true
-      },
-      "pluginVersion": "6.6.2",
-      "targets": [
-        {
-          "expr": "irate(ifHCOutOctets{job=\"$Job\"}[5m])",
-          "intervalFactor": 1,
-          "legendFormat": "{{ifName}} ({{ifAlias}})",
-          "refId": "B"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Out (Current)",
-      "type": "bargauge"
-    },
-    {
-      "datasource": "${DS_PROMETHEUS}",
-      "description": "Max: 10MB  \nRed Status: 9MB",
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 12,
-        "y": 16
-      },
-      "id": 32,
-      "options": {
-        "displayMode": "lcd",
-        "fieldOptions": {
-          "calcs": [
-            "last"
-          ],
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "decimals": 2,
-            "mappings": [],
-            "max": 10000000,
-            "min": 0,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "semi-dark-blue",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 9000000
-                }
-              ]
-            },
-            "unit": "Bps"
-          },
-          "overrides": [],
-          "values": false
-        },
-        "orientation": "horizontal",
-        "showUnfilled": true
-      },
-      "pluginVersion": "6.6.2",
-      "targets": [
-        {
-          "expr": "irate(ifHCOutOctets{job=\"$Job\"}[5m])",
-          "intervalFactor": 1,
-          "legendFormat": "{{ifName}} ({{ifAlias}})",
-          "refId": "B"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "In (Current)",
-      "type": "bargauge"
-    },
-    {
-      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
+      "editable": true,
+      "error": false,
       "fill": 1,
-      "fillGradient": 2,
+      "fillGradient": 0,
       "gridPos": {
-        "h": 10,
+        "h": 7,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 0
       },
       "hiddenSeries": false,
-      "id": 21,
+      "id": 1,
       "legend": {
         "alignAsTable": true,
         "avg": true,
         "current": true,
-        "hideEmpty": false,
+        "hideEmpty": true,
         "hideZero": true,
         "max": true,
         "min": true,
-        "rightSide": true,
+        "rightSide": false,
         "show": true,
-        "sort": null,
-        "sortDesc": null,
+        "sort": "min",
+        "sortDesc": false,
         "total": false,
         "values": true
       },
       "lines": true,
       "linewidth": 1,
-      "nullPointMode": "null",
+      "links": [],
+      "nullPointMode": "connected",
       "options": {
         "dataLinks": []
       },
       "percentage": false,
-      "pluginVersion": "6.3.2",
-      "pointradius": 2,
-      "points": false,
+      "pointradius": 5,
+      "points": true,
       "renderer": "flot",
-      "seriesOverrides": [],
+      "repeat": "Interface",
+      "repeatDirection": "h",
+      "seriesOverrides": [
+        {
+          "alias": "Out",
+          "transform": "negative-Y"
+        }
+      ],
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(ifHCOutOctets{job=\"$Job\"}[5m])",
-          "instant": false,
-          "intervalFactor": 1,
-          "legendFormat": "Out: {{ifName}} ({{ifAlias}})",
-          "refId": "A"
+          "expr": "irate(ifHCInOctets{job='snmp'}[1m])  or irate(ifInOctets{job='snmp'}[1m]) ",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "{{ifIndex}} In",
+          "refId": "A",
+          "step": 60
         },
         {
-          "expr": "-irate(ifHCInOctets{job=\"$Job\"}[5m])",
-          "intervalFactor": 1,
-          "legendFormat": "In: {{ifName}} ({{ifAlias}})",
-          "refId": "B"
+          "expr": "-irate(ifHCInOctets{job='snmp'}[1m])  or -irate(ifInOctets{job='snmp'}[1m]) ",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "{{ifIndex}} Out",
+          "refId": "B",
+          "step": 60
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Out / In",
+      "title": "Interface",
       "tooltip": {
+        "msResolution": false,
         "shared": true,
-        "sort": 2,
+        "sort": 0,
         "value_type": "individual"
       },
       "type": "graph",
@@ -859,7 +114,7 @@
       },
       "yaxes": [
         {
-          "format": "decbytes",
+          "format": "Bps",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -872,7 +127,7 @@
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": false
+          "show": true
         }
       ],
       "yaxis": {
@@ -881,51 +136,43 @@
       }
     }
   ],
-  "refresh": "10s",
+  "refresh": false,
   "schemaVersion": 22,
   "style": "dark",
-  "tags": [
-    "Prometheus",
-    "snmp_exporter"
-  ],
+  "tags": [],
   "templating": {
     "list": [
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_PROMETHEUS}",
-        "definition": "label_values(ifHCInOctets,  job)",
+        "current": {
+          "selected": true,
+          "text": "10.0.17.42",
+          "value": "10.0.17.42"
+        },
+        "datasource": "Prometheus",
+        "definition": "",
         "hide": 0,
         "includeAll": false,
         "label": null,
         "multi": false,
-        "name": "Job",
+        "name": "Device",
         "options": [],
-        "query": "label_values(ifHCInOctets,  job)",
+        "query": "query_result(sum by (instance)(ifInOctets{job=\"snmp\"}))",
         "refresh": 1,
-        "regex": "",
+        "regex": ".*instance=\"(.*?)\".*",
         "skipUrlSync": false,
-        "sort": 0,
-        "tagValuesQuery": "",
+        "sort": 1,
+        "tagValuesQuery": null,
         "tags": [],
-        "tagsQuery": "",
+        "tagsQuery": null,
         "type": "query",
         "useTags": false
-      },
-      {
-        "datasource": "Prometheus",
-        "filters": [],
-        "hide": 0,
-        "label": null,
-        "name": "Filters",
-        "skipUrlSync": false,
-        "type": "adhoc"
       }
     ]
   },
   "time": {
-    "from": "now-30m",
-    "to": "now"
+    "from": "2020-05-05T13:34:46.047Z",
+    "to": "2020-05-05T13:46:39.108Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -939,10 +186,21 @@
       "1h",
       "2h",
       "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
     ]
   },
-  "timezone": "",
-  "title": "SNMP testing parthey",
-  "uid": "7qKD6I1Wk",
-  "version": 2
+  "timezone": "browser",
+  "title": "SNMP Interface Throughput",
+  "uid": "04oJvLeZk",
+  "version": 1
 }
