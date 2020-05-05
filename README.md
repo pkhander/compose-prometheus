@@ -4,7 +4,7 @@
 
 Below are the Pre-requisites to run this stack. 
 
-#Pre-requisites
+# Pre-requisites
 
 1. Ensure you have [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker compose](https://docs.docker.com/compose/install/) on your system
 
@@ -15,7 +15,7 @@ Below are the Pre-requisites to run this stack.
 After these changes you should be all set to run the stack using *docker-compose up*
 
 
-#Please note
+# Please note
 
 1. Prometheus is running on port 9990
 2. Grafana is running on port 3110
