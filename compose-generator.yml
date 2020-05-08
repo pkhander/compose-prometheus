@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  snmp-generator:
+    image: prom/snmp-generator
+    volumes:
+      - ./snmp_generator/:/opt/
