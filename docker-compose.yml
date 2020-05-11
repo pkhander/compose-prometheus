@@ -25,7 +25,7 @@ services:
   snmp-exporter:
     image: prom/snmp-exporter
     volumes:
-      - ./snmp_exporter/:/etc/snmp_exporter/
+      - ./snmp_generator/snmp.yml:/etc/snmp_exporter/snmp.yml
     networks:
       - public
 

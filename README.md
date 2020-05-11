@@ -10,8 +10,10 @@
 
 3. In *snmp_exporter/snmp.yml*, replace ```COMMUNITY_STRING``` with the community string of the SNMP device (it should be the last line of the file)
 
-After these changes you should be all set to run the stack using *docker-compose up*
+# Running
 
+1. Generate the `snmp.yml` file with `docker-compose -f compose-generator.yml up`
+2. Run the docker-compose stack with `docker-compose up`
 
 # Please note
 
