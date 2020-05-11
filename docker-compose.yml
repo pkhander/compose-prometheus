@@ -26,11 +26,6 @@ services:
     image: prom/snmp-exporter
     volumes:
       - ./snmp_generator/snmp.yml:/etc/snmp_exporter/snmp.yml
-    expose:
-      - 9116  
-    ports:
-      - 9116:9116
-      - 116:116/udp
     networks:
       - public
 
